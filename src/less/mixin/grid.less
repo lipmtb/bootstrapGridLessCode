@@ -1,0 +1,56 @@
+
+@import  "./clearfix.less";
+@import "./variable.less";
+
+.container-base(){
+    padding:0 15px;
+    &:extend(.clearfloat all);
+}
+@grid-columns:12;
+@grid-gutter-width:30px;
+
+
+
+
+.jjcc-container,.jjcc-row{
+
+   .container-base;
+
+}
+
+.jjcc-row{
+    margin:0 -15px;
+}
+
+@media screen and(min-width:@smallwidth) {
+    .jjcc-container{
+        width:750px;
+    } 
+}
+
+@media screen  and (min-width:@middlewidth){
+    .jjcc-container{
+        width:970px;
+    } 
+}
+
+
+@media screen  and (min-width:@maxwidth){
+    .jjcc-container{
+        width:1170px;
+    } 
+
+
+    .jjcc-lg-2,.jjcc-lg-10{
+        float:left;
+    }
+    .jjcc-lg-2{
+        width:calc((@maxwidth - 60px) /6);
+    }
+
+    .jjcc-lg-10{
+        width:calc((@maxwidth - 60px) /6*5);
+    }
+}
+
+
